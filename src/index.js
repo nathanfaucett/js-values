@@ -1,6 +1,15 @@
 var keys = require("keys");
 
 
+module.exports = values;
+
+
+function values(object) {
+    return objectValues(object, keys(object));
+}
+
+values.objectValues = objectValues;
+
 function objectValues(object, objectKeys) {
     var length = objectKeys.length,
         results = new Array(length),
@@ -13,13 +22,3 @@ function objectValues(object, objectKeys) {
 
     return results;
 }
-
-
-function values(object) {
-    return objectValues(object, keys(object));
-}
-
-values.objectValues = objectValues;
-
-
-module.exports = values;
