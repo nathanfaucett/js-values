@@ -1,4 +1,4 @@
 values
 =======
 
-values for the browser and node.js
+returns array values from an object
